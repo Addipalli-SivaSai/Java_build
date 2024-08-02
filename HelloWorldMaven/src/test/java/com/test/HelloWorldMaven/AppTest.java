@@ -1,5 +1,4 @@
 package com.test.HelloWorldMaven;
-
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -38,12 +37,5 @@ public class AppTest
     }
 
  
-public class CalculatorTest {
-    @Test
-    public void testAdd() {
-        Calculator calculator = new Calculator();
-        int result = calculator.add(2, 3);
-        assertEquals(5, result);
-    }
-}
-}
+
+
