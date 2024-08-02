@@ -9,7 +9,7 @@ pipeline {
             steps {
                      script{
                     bat '''cd HelloWorldMaven'''
-                
+                      bat 'dir'
                         bat "mvn clean compile"
                      }
             }
