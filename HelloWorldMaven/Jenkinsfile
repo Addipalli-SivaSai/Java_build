@@ -22,7 +22,7 @@ pipeline {
         }
          stage('Package'){
             steps {
-                        bat "mvn Package"
+                        bat "mvn clean Package"
 
             }
         }
