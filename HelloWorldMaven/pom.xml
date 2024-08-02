@@ -35,15 +35,14 @@
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
-      <configuration>
-                    <archive>
+      
+                 
                         <manifest>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                             <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
                             <mainClass>com.test.HelloWorldMaven.App</mainClass>
                         </manifest>
-                    </archive>
-                </configuration>
+                 
     </dependency>
   </dependencies>
 </project>
