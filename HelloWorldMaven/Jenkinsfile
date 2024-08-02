@@ -20,6 +20,12 @@ pipeline {
 
             }
         }
+         stage('Package'){
+            steps {
+                        bat "mvn Package"
+
+            }
+        }
         // stage('build && SonarQube analysis') {
         //     steps {
         //         withSonarQubeEnv('sonar.tools.devops.****') {
