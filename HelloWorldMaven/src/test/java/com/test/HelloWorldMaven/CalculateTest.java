@@ -1,11 +1,30 @@
-package com.test.HelloWorldMaven;
-import org.junit.Test;
-import static org.junit.Assert.assertEquals;
-public class CalculateTest {
-    @Test
+import junit.framework.TestCase;
+ 
+public class CalculatorTest extends TestCase {
+    private Calculator calculator;
+ 
+    public CalculatorTest(String name) {
+        super(name);
+    }
+ 
+    public static Test suite() {
+        return new TestSuite(CalculatorTest.class);
+    }
+ 
+    public void setUp() {
+        calculator = new Calculator();
+    }
+ 
+    public void tearDown() {
+        calculator = null;
+    }
+ 
     public void testAdd() {
-        Calculator calculator = new Calculator();
-        int result = calculator.add(2, 3);
-        assertEquals(5, result);
-    }   
-}
+        int result = calculator.add(2, 2);
+        assertEquals(4, result);
+    }
+ 
+    public void testSubtract() {
+        int result = calculator.subtract(4, 2);
+        assertEquals(2, result);
+    }
