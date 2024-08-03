@@ -5,6 +5,12 @@ pipeline {
     }
     agent any 
     stages {
+        stage("checks")
+        {
+            steps{
+                bat 'mvn pwd:check'
+            }
+        }
         stage('Build') { 
             steps {
                      script{
