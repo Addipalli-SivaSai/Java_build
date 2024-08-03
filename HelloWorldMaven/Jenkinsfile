@@ -8,7 +8,10 @@ pipeline {
         stage("checks")
         {
             steps{
-                bat 'mvn checkstyle:checkstyle'
+                bat '''
+                cd HelloWorldMaven
+                mvn checkstyle:check
+                '''
                
             }
         }
