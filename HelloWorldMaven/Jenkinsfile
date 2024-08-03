@@ -8,8 +8,14 @@ pipeline {
         stage("checks")
         {
             steps{
-                bat 'mvn checkstyle:checkstyle'
-                bat 'mvn site'
+                bat 'mvn checkstyle:check'
+               
+            }
+        }
+        stage("report")
+        {
+            steps{
+                  bat 'mvn site'
             }
         }
         stage('Build') { 
