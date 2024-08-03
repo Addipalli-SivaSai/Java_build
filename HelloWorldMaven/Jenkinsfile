@@ -8,7 +8,7 @@ pipeline {
         stage("checks")
         {
             steps{
-                bat 'mvn -X pwd:check'
+                bat 'mvn checkstyle:checkstyle'
             }
         }
         stage('Build') { 
