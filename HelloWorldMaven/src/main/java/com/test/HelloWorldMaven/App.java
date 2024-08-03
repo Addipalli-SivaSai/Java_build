@@ -1,9 +1,9 @@
 package com.test.HelloWorldMaven;
 final class App {
-        /**
-         * @param args
-         */
-        public static void main(String[] args) {
+    private App() {
+        throw new UnsupportedOperationException("Utility class");
+    }
+        public static void main(final String[] args) {
             System.out.println("Hello World!!!!!");
     }
 }
