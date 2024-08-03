@@ -9,6 +9,7 @@ pipeline {
         {
             steps{
                 bat 'mvn checkstyle:checkstyle'
+                bat 'mvn site'
             }
         }
         stage('Build') { 
