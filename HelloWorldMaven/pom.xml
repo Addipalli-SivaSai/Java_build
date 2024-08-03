@@ -35,12 +35,6 @@
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>  
-      <configuration>
-                    <configLocation>google_checks.xml</configLocation>
-                    <outputFile>target/checkstyle-result.xml</outputFile>
-                    <outputFormat>xml</outputFormat>
-                    <reportOutputDirectory>target/site</reportOutputDirectory>
-      </configuration>
     </dependency>
   </dependencies>
   <reporting>
