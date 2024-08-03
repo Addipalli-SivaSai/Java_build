@@ -12,12 +12,6 @@ pipeline {
                
             }
         }
-        stage("report")
-        {
-            steps{
-                  bat 'mvn site'
-            }
-        }
         stage('Build') { 
             steps {
                      script{
