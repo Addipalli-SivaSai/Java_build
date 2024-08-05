@@ -27,7 +27,9 @@ pipeline {
         }
         stage('Test'){
             steps {
-                        bat "mvn test"
+                        bat "'
+                        cd HelloWorldMaven
+                        mvn test"
 
             }
         }
