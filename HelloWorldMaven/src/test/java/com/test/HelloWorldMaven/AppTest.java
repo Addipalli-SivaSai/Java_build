@@ -1,9 +1,6 @@
 package com.test.HelloWorldMaven;
-
- 
-import org.junit.jupiter.api.Test;
- 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 
 public class AppTest
 {
@@ -11,7 +8,7 @@ public class AppTest
     @Test
     public void testAppMessage()
     {
-        assertEquals("Hello World!", "Hello World!");
+        assertEquals(2, 2);
     }
 }
 
