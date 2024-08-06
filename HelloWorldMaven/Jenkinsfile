@@ -1,11 +1,9 @@
 pipeline { 
      tools {
         maven "Maven"
-        hudson.plugins.sonar.SonarRunnerInstallation "sonarqube"
+        sonarQube "sonarqube"
     }
-    environment{
-        SONARQUBE_URL='https://sonarcloud.io/'
-    }
+  
     agent any 
     stages {
         stage("checks")
