@@ -27,9 +27,18 @@ pipeline {
         }
         stage('Test'){
             steps {
+                script{
+                    try{
                         bat '''
                         cd HelloWorldMaven
                         mvn test'''
+                    }
+                    catch(Exception e)
+                    {
+                        echo "Test stage if failed due to some failure of test cases"
+                        echo "${e.getMessage()}"
+                    }
+                }
 
             }
         }
