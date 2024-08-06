@@ -30,8 +30,8 @@ pipeline {
                 script {
                     def scannerHome = tool name: 'sonarqubescanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
                     withSonarQubeEnv('sonarqube') {
-                        def path='${scannerHome}/bin/sonar-scanner'
-                        bat "${path}"
+                        // def path='${scannerHome}/bin/sonar-scanner'
+                        // bat "${path}"
                         bat '''
                         C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.plugins.sonar.SonarRunnerInstallation\\sonarqubescanner\\bin\\sonar-scanner\
                 -Dsonar.projectKey=sivasai-jenkins\
