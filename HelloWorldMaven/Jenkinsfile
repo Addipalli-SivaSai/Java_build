@@ -88,7 +88,9 @@ pipeline {
         }
          stage('Package'){
             steps {
-                        bat "mvn package"
+                        bat '''
+                        cd cd HelloWorldMaven
+                        mvn packag'''
 
             }
         }
