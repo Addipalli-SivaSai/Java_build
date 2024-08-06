@@ -30,8 +30,10 @@ pipeline {
                 script {
                     def scannerHome = tool name: 'sonarqubescanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
                     withSonarQubeEnv('sonarqube') {
+                        def path='${scannerHome}/bin/sonar-scanner'
+                        bat "${path}"
                         bat '''
-                        ${scannerHome}/bin/sonar-scanner\
+                        C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.plugins.sonar.SonarRunnerInstallation\\sonarqubescanner\\bin\\sonar-scanner\
                 -Dsonar.projectKey=sivasai-jenkins\
                  -Dsonar.sources=./src\
                  -Dsonar.organization=sivasai-jenkins_assessment\
@@ -98,12 +100,12 @@ pipeline {
         //     }
         // }
     }
-    post{
-        always{
-            emailext attachLog: true, body: '''Hi,
-The current status of build ${BUILD_STATUS} 
+//     post{
+//         always{
+//             emailext attachLog: true, body: '''Hi,
+// The current status of build ${BUILD_STATUS} 
 
-Thanks''', subject: 'Recend Build Status', to: 'addipallisivasai@gmail.com'
-        }
-    }
+// Thanks''', subject: 'Recend Build Status', to: 'addipallisivasai@gmail.com'
+//         }
+//     }
 }
