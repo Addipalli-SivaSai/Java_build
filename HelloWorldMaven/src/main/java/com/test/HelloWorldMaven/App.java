@@ -6,16 +6,14 @@ final class App {
         public static void main(final String[] args) {
             int a;
             System.out.println("Hello World!!!!!");
-            for(int i=0;i<10;i++)
-            {
+            for(int i= 0 ; i< 10 ; i++) {
+                System.out.println(i); 
+
+            }
+            for(int i = 0 ;i < 10 ;i ++ ) {
                 System.out.println(i);
 
             }
-            for(int i=0;i<10;i++)
-            {
-                System.out.println(i);
 
-            }
-            
     }
 }
