@@ -1,6 +1,7 @@
 pipeline { 
      tools {
         maven "Maven"
+        sonarqube "sonarqube"
     }
     environment{
         SONARQUBE_URL='https://sonarcloud.io/'
@@ -31,7 +32,7 @@ pipeline {
             steps {
                withSonarQubeEnv('sonarqube')
                {
-                   bat 'mvn sonar:sonar -X'
+                   bat 'mvn sonar:sonar'
                }
                 
             }
