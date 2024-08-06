@@ -1,7 +1,7 @@
 pipeline { 
      tools {
         maven "Maven"
-        sonarqube "sonarqube"
+        hudson.plugins.sonar.SonarRunnerInstallation "sonarqube"
     }
     environment{
         SONARQUBE_URL='https://sonarcloud.io/'
