@@ -32,7 +32,7 @@ pipeline {
                     withSonarQubeEnv('sonarqube') {
                         // def path='${scannerHome}/bin/sonar-scanner'
                         // bat "${path}"
-                        bat '''
+                        bat ''' 
                         C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.plugins.sonar.SonarRunnerInstallation\\sonarqubescanner\\bin\\sonar-scanner\
                 -Dsonar.projectKey=sivasai-jenkins_assessment\
                  -Dsonar.sources=HelloWorldMaven\\src\\main\\java\
@@ -78,7 +78,7 @@ pipeline {
         }
          stage('Package'){
             steps {
-                        bat "mvn package -X"
+                        bat "mvn package"
 
             }
         }
