@@ -27,7 +27,7 @@ pipeline {
         }
           stage('Static code analysis analysis') {
             steps {
-                withSonarQubeEnv("sonarcloud"){
+                withSonarQubeEnv("sonarqube"){
                 bat '''
                 -Dsonar.projectKey=sivasai-jenkins\
                  -Dsonar.sources=./src\
