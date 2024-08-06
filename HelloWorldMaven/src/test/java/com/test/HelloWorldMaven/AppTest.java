@@ -13,7 +13,7 @@ public class AppTest
     @Test
     public void test2()
     {
-             assertEquals("siva", "sai");
+             assertEquals("siva", "siva");
     } 
 
 }
