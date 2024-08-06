@@ -90,7 +90,7 @@ pipeline {
             steps {
                         bat '''
                         cd HelloWorldMaven
-                        mvn packag'''
+                        mvn package'''
 
             }
         }
