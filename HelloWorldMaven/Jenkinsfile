@@ -2,7 +2,6 @@ pipeline {
      tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "Maven"
-        sonarqube "sonarqube"
     }
     agent any 
     stages {
@@ -28,13 +27,15 @@ pipeline {
         }
           stage('Static code analysis analysis') {
             steps {
-               
+               withSonarQubeEnv('sonarqube')
+               {
                 bat '''
                 -Dsonar.projectKey=sivasai-jenkins\
                  -Dsonar.sources=./src\
                  -Dsonar.organization=sivasai-jenkins_assessment\
                  -Dsonar.login=3cade956570c411a53b32955b9337e4281d5d6fd\
                  '''
+               }
                 
             }
         }
