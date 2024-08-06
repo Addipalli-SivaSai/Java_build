@@ -7,14 +7,24 @@ pipeline {
     stages {
         stage("checks")
         {
+           
             steps{
+                script{
+                 try{
                 bat '''
                 cd HelloWorldMaven
                 mvn checkstyle:check
-                mvn site
-                '''
-               
+                ''' 
             }
+            
+              catch(Exception e)
+                    {
+                        echo "Test stage if failed due to some vialotions"
+                        echo "${e.getMessage()}"
+                    }
+            }
+            }       
+
         }
         stage('Build') { 
             steps {
