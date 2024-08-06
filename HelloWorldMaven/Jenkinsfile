@@ -25,6 +25,16 @@ pipeline {
                      }
             }
         }
+          stage('Static code analysis analysis') {
+            steps {
+                bat 'sonar-scanner\
+                -Dsonar.projectKey=\
+                 -Dsonar.sources=./src\
+                 -Dsonar.organization=\
+                 -Dsonar.login=3cade956570c411a53b32955b9337e4281d5d6fd\
+                 '
+            }
+        }
         stage('Test'){
             steps {
                 script{
@@ -61,13 +71,7 @@ pipeline {
 
             }
         }
-        // stage('build && SonarQube analysis') {
-        //     steps {
-        //         withSonarQubeEnv('sonar.tools.devops.****') {
-        //             sh 'sonar-scanner -Dsonar.projectKey=myProject -Dsonar.sources=./src'
-        //         }
-        //     }
-        // }
+      
         // stage("Quality Gate") {
         //     steps {
         //         timeout(time: 1, unit: 'HOURS') {
