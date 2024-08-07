@@ -114,12 +114,12 @@ pipeline {
         //     }
         // }
     }
-//     post{
-//         always{
-//             emailext attachLog: true, body: '''Hi,
-// The current status of build ${BUILD_STATUS} 
+    post{
+        always{
+            emailext attachLog: true, body: '''Hi,
+The current status of build ${BUILD_STATUS} 
 
-// Thanks''', subject: 'Recend Build Status', to: 'addipallisivasai@gmail.com'
-//         }
-//     }
+Thanks''', subject: 'Recend Build Status', to: 'addipallisivasai@gmail.com'
+        }
+    }
 }
