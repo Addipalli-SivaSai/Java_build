@@ -105,21 +105,13 @@ pipeline {
         //         }
         //     }
 		// 	}
-        // stage('Deploy') {
-        //     steps {
-        //        withMaven(maven : 'apache-maven-3.6.0'){
-        //                 sh "mvn deploy"
-        //         }
-
-        //     }
-        // }
+   
     }
     post{
         always{
             emailext attachLog: true, body: '''Hi,
-The current status of build ${BUILD_STATUS} 
-
-Thanks''', subject: 'Recend Build Status', to: 'addipallisivasai@gmail.com'
+           The current status of build ${BUILD_STATUS} 
+            Thanks''', subject: 'Recend Build Status', to: 'addipallisivasai@gmail.com'
         }
     }
 }
